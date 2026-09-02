@@ -13,12 +13,13 @@ format:
       caption: "Source Code"
 ---
 
-::: {.callout-note}
+::: callout-note
 ### Instructions
-Work in pairs during class. 
 
-* 📥 **[Download `week-01-inclass.qmd`](https://raw.githubusercontent.com/gph-2182/gph-2182.github.io/main/weeks/inclass/week-01-inclass.qmd)** to open and edit in RStudio (or use the **`</> Source Code`** button at the top right).
-* Render this Quarto document to HTML and push it to your GitHub repository by the end of class for participation credit.
+Work in pairs during class.
+
+- 📥 [**Download `week-01-inclass.qmd`**](https://raw.githubusercontent.com/gph-2182/gph-2182.github.io/main/weeks/inclass/week-01-inclass.qmd) to open and edit in RStudio (or use the **`</> Source Code`** button at the top right).
+- Render this Quarto document to HTML and push it to your GitHub repository by the end of class for participation credit.
 :::
 
 # Cycle 1: R as a Calculator and Environment Setup
@@ -35,7 +36,12 @@ $$\text{BMI} = \frac{\text{weight in kg}}{(\text{height in meters})^2}$$
 
 ```{r bmi-calculations}
 # Write your calculations below:
-
+a <- 70/1.75**2
+b <- 85/1.80**2
+c <- 58/1.62**2
+a
+b
+c
 ```
 
 ## Exploring Built-in Functions
@@ -44,21 +50,23 @@ Compute the mean of the three BMIs you calculated above. Round the result to 2 d
 
 ```{r bmi-summary}
 # Write your summary code below:
-
+round(mean(c(a,b,c)), 2)
 ```
 
 ## R Packages and Documentation
 
-1. Load the `r02pro` package (install it in the Console with `install.packages("r02pro")` if you haven't already).
-2. Display the first 6 rows of the `ahp` dataset using the `head()` function.
-3. Open the help file for the `median()` function using `?median`.
+1.  Load the `r02pro` package (install it in the Console with `install.packages("r02pro")` if you haven't already).
+2.  Display the first 6 rows of the `ahp` dataset using the `head()` function.
+3.  Open the help file for the `median()` function using `?median`.
 
 ```{r r02pro-check}
 # Load library and inspect data:
-
+library(r02pro)
+head(ahp)
+?median
 ```
 
----
+------------------------------------------------------------------------
 
 # Cycle 2: Reproducible Reporting with Quarto
 
@@ -70,7 +78,12 @@ In the space below:
 - Include at least one **bold** phrase and one *italicized* word.
 - Add a bulleted list of two advantages of Quarto over traditional copy-pasting into Word.
 
-*(Type your text response here)*
+**Reproducible** *research* in public health ensures that data collection, analytical methods, and statistical results can be independently verified and duplicated by other scientists to confirm the validity of critical findings. By maintaining this high standard of transparency, the scientific community can confidently translate research data into trustworthy, evidence-based health policies and medical interventions that protect public well-being.
+
+Two advantages of Quarto over traditional copy-pasting into Word:
+
+- Quarto combines your narrative text, code and data into one document.
+- If your data changes, you simply re-run the document; all tables, metrics, and charts update automatically, eliminating the need to manually re-generate and re-paste visuals.
 
 ## Code Chunk Customization
 
@@ -79,10 +92,11 @@ Create an R code chunk below with chunk option `#| echo: true` that creates a ve
 ```{r}
 #| echo: true
 # Write your code here:
-
+bp <- c(120, 134, 118, 142, 128)
+sd(bp)
 ```
 
----
+------------------------------------------------------------------------
 
 # Cycle 3: Git & GitHub Workflow
 
@@ -92,7 +106,7 @@ Confirm the following steps with your partner:
 - [ ] You have configured your Git identity in RStudio (`git config --global user.name` and `user.email`).
 - [ ] You rendered this `.qmd` document to `.html` without any errors.
 
----
+------------------------------------------------------------------------
 
 # Cycle 4: AI Corner — Verification Exercise
 
@@ -108,19 +122,22 @@ area <- 3.14 * (radius * 2)
 
 ### Questions:
 
-1. Is the AI-generated code correct? What error did it make?
-2. Correct the code below using R's built-in constant `pi` and proper formula ($\text{Area} = \pi r^2$):
+1.  Is the AI-generated code correct? What error did it make?
+
+    No, the AI-generated code is incorrect. It multiplied *radius* by 2 instead of squaring it.
+
+2.  Correct the code below using R's built-in constant `pi` and proper formula ($\text{Area} = \pi r^2$):
 
 ```{r corrected-code}
 # Corrected code:
-
+radius <- 7.5
+area <- 3.14 * (radius ** 2)
 ```
 
----
+------------------------------------------------------------------------
 
 ## Submission Checklist
 
 - [ ] Both your name and your partner's name are in the `author` field at the top.
 - [ ] Click **Render** in RStudio and verify the HTML looks clean.
 - [ ] Commit and push your changes to GitHub.
-
