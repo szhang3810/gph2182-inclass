@@ -102,9 +102,9 @@ sd(bp)
 
 Confirm the following steps with your partner:
 
-- [ ] You have initialized Git in your local R project.
-- [ ] You have configured your Git identity in RStudio (`git config --global user.name` and `user.email`).
-- [ ] You rendered this `.qmd` document to `.html` without any errors.
+- [x] You have initialized Git in your local R project.
+- [x] You have configured your Git identity in RStudio (`git config --global user.name` and `user.email`).
+- [x] You rendered this `.qmd` document to `.html` without any errors.
 
 ------------------------------------------------------------------------
 
@@ -138,6 +138,6 @@ area <- 3.14 * (radius ** 2)
 
 ## Submission Checklist
 
-- [ ] Both your name and your partner's name are in the `author` field at the top.
-- [ ] Click **Render** in RStudio and verify the HTML looks clean.
-- [ ] Commit and push your changes to GitHub.
+- [x] Both your name and your partner's name are in the `author` field at the top.
+- [x] Click **Render** in RStudio and verify the HTML looks clean.
+- [x] Commit and push your changes to GitHub.
