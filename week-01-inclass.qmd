@@ -39,6 +39,9 @@ $$\text{BMI} = \frac{\text{weight in kg}}{(\text{height in meters})^2}$$
 a <- 70/1.75**2
 b <- 85/1.80**2
 c <- 58/1.62**2
+a
+b
+c
 ```
 
 ## Exploring Built-in Functions
